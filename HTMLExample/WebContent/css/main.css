@@ -1,0 +1,39 @@
+.box {
+	margin-left: 40px;
+	background-color: #9dceff;
+	border: 2px thin #0094ff;
+}
+
+.box h1 {
+	color: black;
+	padding: 10px;
+	text-align: right;
+	font-size: 42px;
+}
+
+#text {
+	text-align: right;
+	font-size: 22px;
+	color: #dd0000;
+}
+
+.Vbox {
+	margin-right: 40px;
+	background-color: #ffa042;
+	border: 2px thin #0094ff;
+}
+
+.Vbox h1 {
+	color: black;
+	padding: 10px;
+	text-align: left;
+	font-size: 25px;
+}
+
+.vehicleDetTab td {
+	padding: 0px 55px 0px 25px;
+}
+
+.vehicleDetTab th {
+	padding: 0px 55px 0px 25px;
+}
