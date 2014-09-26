@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="">
+<body>
+	<div>
+		<p>
+			Name: <input type="text" ng-model="name">
+		</p>
+		<p ng-bind="name"></p>
+	</div>
+	<p>My first expression: {{ 5 * 5 }}</p>
+	<div ng-controller="personController">
+
+		First Name: <input type="text" ng-model="firstName"> <br>
+		Last Name: <input type="text" ng-model="lastName"> <br>
+		Full Name: {{firstName + " " + lastName}}
+		<p>
+			The name is <span ng-bind="firstName + ' ' + lastName"></span>
+		</p>
+	</div>
+
+	<div ng-init="person={firstName:'John',lastName:'Doe'}">
+		<p>The name is {{ person.lastName }}</p>
+	</div>
+
+
+	<div ng-init="points=[1,15,19,2,40]">
+		<p>The points are {{ points[2] }}</p>
+	</div>
+	
+	<div ng-init="names=['Jani','Hege','Kai']">
+	  <ul>
+	    <li ng-repeat="x in names">
+	      {{ x }}
+	    </li>
+	  </ul>
+	</div>
+
+	<div>
+
+		Quantity: <input type="number" ng-model="quantity"> Costs: <input
+			type="number" ng-model="price"> Total in dollar: {{ quantity
+		* price }}
+
+	</div>
+
+	<script>
+		function personController($scope) {
+			$scope.firstName = "John";
+			$scope.lastName = "Doe";
+		}
+	</script>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+</body>
+</html>
