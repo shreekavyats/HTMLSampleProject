@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Example - example-ngController-production</title>
+</head>
+<body ng-app="controllerEx">
+	<div id="ctrl-exmpl" ng-controller="SettingsController">
+		Name: <input type="text" ng-model="name" /><br> Contact:
+		<ul>
+			<li ng-repeat="contact in contacts"><select
+				ng-model="contact.type">
+					<option>phone</option>
+					<option>email</option>
+			</select> <input type="text" ng-model="contact.value" /> 
+			[ <a href="" ng-click="clearContact(contact)">clear</a> ]</li>
+		</ul>
+	</div>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
